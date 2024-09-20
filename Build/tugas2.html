@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Panitia Kegiatan XYZ</title>
+    <link rel="stylesheet" href="tugas2.css">
+</head>
+<body>
+    <h1>Formulir Pendaftaran Panitia Kegiatan XYZ</h1>
+    <form id="registrationForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" required>
+
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" required>
+
+        <label for="kelas">Kelas:</label>
+        <input type="text" id="kelas" required>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" required></textarea>
+
+        <button type="submit" id="submitButton" disabled>kirim</button>
+    </form>
+
+    <h2>Tampilkan datanya disini...</h2>
+    <table id="dataTable">
+        <tr>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>NIM</th>
+            <th>Alamat</th>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+    </table>
+
+    <script src="tugas2.js"></script>
+</body>
+</html>
