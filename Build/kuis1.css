@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#formMahasiswa {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+}
+
+input[type="text"], select {
+    width: calc(100% - 110px);
+    padding: 5px;
+}
+
+.radio-label, .checkbox-label {
+    display: block;
+    margin-left: 100px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
