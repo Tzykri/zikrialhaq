@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Node JS - MySQL</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Daftar Produk</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama Produk</th>
+            <th>Harga</th>
+            <th>Aksi</th>
+        </tr>
+        <% products.forEach(product => { %>
+        <tr>
+            <td><%= product.id %></td>
+            <td><%= product.nama_produk %></td>
+            <td><%= product.harga %></td>
+            <td>
+                <a href="/edit/<%= product.id %>">Edit</a>
+                <a href="#" onclick="konfirmasiHapus('<%= product.id %>')">Hapus</a>
+            </td>
+        </tr>
+        <% }); %>
+    </table>
+
+    <script>
+    function konfirmasiHapus(id) {
+        if (confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+            window.location.href = '/delete/' + id;
+        }
+    }
+    </script>
+
+    <h2>Tambah Produk Baru</h2>
+    <form action="/add" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menambahkan produk baru?');">
+        <label for="nama_produk">Nama Produk:</label>
+        <input type="text" id="nama_produk" name="nama_produk" required><br>
+        <label for="harga">Harga:</label>
+        <input type="text" id="harga" name="harga" required><br>
+        <button type="submit">Tambah</button>
+    </form>
+</body>
+</html>
